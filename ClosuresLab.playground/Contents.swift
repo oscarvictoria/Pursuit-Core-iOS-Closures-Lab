@@ -29,11 +29,9 @@ assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
 
 // Your function here
 
-func multiples(of: Int, in:[Int]) -> [Int] {
+
     
-    
-    
-} return
+
 
 
 
@@ -51,12 +49,39 @@ func multiples(of: Int, in:[Int]) -> [Int] {
 
 // Your function here
 
+func largestValue(in numbers: [Int]) -> Int {
+   
+    guard let first = numbers.first else { return -1}
+    // using trailing closure syntax to solve reduce exercise.
+    let result = numbers.reduce(first) { prevResult, currentValue in
+        if prevResult > currentValue {
+            return currentValue
+        } else {
+            return currentValue
+        }
+        
+    }
+    
+    // 1. numbers.reduce (0, +)
+    /*  2. numbers.reduce(0) { prevResult, currentValue in
+     
+     
+     }
+     
+     */
+    return result
+}
+
+let largesrtValue = largestValue(in:[56, 100, -56, 0, 208])
+print(largesrtValue)
+
+
 // Uncomment out the following lines to check your solution
 
-//let moreNumbers = [4, 7, 1, 9, 6, 5, 6, 9]
-//let expectedOutputThree = 9
-//let outputThree = largestValue(in: moreNumbers)
-//assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutputThree), but found \(outputThree)")
+let moreNumbers = [4, 7, 1, 9, 6, 5, 6, 9]
+let expectedOutputThree = 9
+let outputThree = largestValue(in: moreNumbers)
+assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutputThree), but found \(outputThree)")
 
 
 // Question Four
