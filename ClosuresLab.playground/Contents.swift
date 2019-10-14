@@ -7,13 +7,20 @@ import UIKit
 
 // Your function here
 
+func applyKTimes(_ k: Int, _ y: () -> ()) {
+    if k < 1 { return }
+    for _ in 1...k {
+    y()
+        
+    }
+}
 // Uncomment out the following lines to check your solution
 
-//var myVal = 0
-//applyKTimes(5) {
-//    myVal += 1
-//}
-//assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
+var myVal = 0
+applyKTimes(5) {
+    myVal += 1
+}
+assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
 
 
 // Question Two
@@ -21,6 +28,14 @@ import UIKit
 // Write a function called multiples(of:in) that takes in an array of Ints and returns all of the Ints that are a multiple of a given number n.  Use filter in your function.
 
 // Your function here
+
+func multiples(of: Int, in:[Int]) -> [Int] {
+    
+    
+    
+} return
+
+
 
 // Uncomment out the following lines to check your solution
 
